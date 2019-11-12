@@ -1,0 +1,49 @@
+.external {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+
+.external:hover {
+    background-color: #8fa8a5;
+}
+
+.external h2,
+.external p {
+    margin: 5px 0px;
+    margin-top: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.writer {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.time {
+    float: left;
+    display: inline-block;
+}
+
+.external a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    padding: 8px;
+}
+
+.cover {
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+}

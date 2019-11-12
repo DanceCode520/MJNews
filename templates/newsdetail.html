@@ -1,0 +1,48 @@
+{% extends 'backBase.html' %}
+{% block cssorjs %}
+    <script src="{{ url_for('static', filename = 'home.js') }}"></script>
+{% endblock %}
+{% block name %}
+    <img src="/static/images/head.jpg" style="width: 28px;border-radius:14px;" alt="logo">
+    {{ name }}
+{% endblock %}
+{% block rgcon %}
+    <div class="bkcontent">
+        <div>新闻标题:
+            <input type="text" id="title" value="{{news.title}}" placeholder="news title">
+        </div>
+        <div>新闻作者:
+            <input type="text" id="writer" value="{{ news.writer }}" placeholder="news weriter">
+        </div>
+        <div>新闻内容:
+            <textarea name="" id="content8" cols="40" rows="10">{{ news.content }}</textarea>
+        </div>
+        <div>
+            发布时间:<input type="date" name="" id="date" class="form-control" value="{{ news.time }}" required="required"
+                        title="">
+        </div>
+        <div>所属类别:<select name="" id="mjselect">
+            {% for ntype in newTypes %}
+                {% if ntype.type==news.ntype %}
+                    <option value="{{ ntype.type }}" selected>{{ ntype.content }}</option>
+                {% else %}
+                    <option value="{{ ntype.type }}">{{ ntype.content }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        </div>
+        <div><img src="{{ url }}" id="mjimg" alt=""></div>
+        <div>
+            <form action="upload">
+                <input type="file" onchange="fileChange()" id="mjfile"/>
+            </form>
+        </div>
+        <div>
+            <input type="submit" onclick="getFile({{ news.id }},'1')" value="change">
+            <input type="submit" onclick="getFile({{ news.id }},'0')" value="insert">
+            <input type="submit" onclick="getFile({{ news.id }},'2')" value="delete">
+            <button onclick="javascript :history.back(-1);">back</button>
+            <button onclick="clearAll()">clear</button>
+        </div>
+    </div>
+{% endblock %}

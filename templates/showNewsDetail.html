@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block mjcontent %}
+    <div class="ndetail">
+        <h1>{{ news.title }}</h1>
+        <p class="first">{{ news.writer }} {{ news.time}}</p>
+        <p>{{ news.content }}</p>
+        <img src="{{ url }}" alt="">
+    </div>
+{% endblock %}

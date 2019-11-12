@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MJNews</title>
+    <srcipt src="{{ url_for('static',filename='jquery.min.js') }}"></srcipt>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="icon" href="/static/images/tlogo.ico" type="image/x-icon"/>
+    {% block mjcss %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="mjhead">
+    <div class="mjtitle"><img src="/static/images/logo1.png" style="width: 28px;border-radius: 4px;" alt="logo">MJNews
+    </div>
+    <div class="head">
+        <ul>
+            <li><a href="{{ url_for('getAllNewsByType',id=1) }}">财经</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=2) }}">政治</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=3) }}">娱乐</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=4) }}">科技</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=5) }}">军事</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=6) }}">历史</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=7) }}">游戏</a></li>
+            <li><a href="{{ url_for('getAllNewsByType',id=8) }}">职场</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="mjcontent">
+    {% block mjcontent %}
+
+    {% endblock %}
+</div>
+
+<div class="mjfoot">
+    <div>MICHAEL JACKSON, THE KING OF POP</div>
+</div>
+</body>
+</html>

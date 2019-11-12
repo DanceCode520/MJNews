@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <script src="{{ url_for('static', filename = 'home.js') }}" ></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+<div class="logbk">
+    <div class="cover">
+        <form action = "/userInfo" method = "POST">
+            <p>用户名：</p>
+            <p><input type = "text" name = "name" /></p>
+            <p style="margin-top: 20px">密码：</p>
+            <p><input type = "Password" name= "password" /></p>
+            <p style="margin-top: 10px"><input class="loginbut" type="submit" type = "登录" value = "submit" /></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

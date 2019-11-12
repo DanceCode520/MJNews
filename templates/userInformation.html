@@ -1,0 +1,18 @@
+{% extends 'backBase.html' %}
+{% block name %}
+    <img src="/static/images/head.jpg" style="width: 28px;border-radius:14px;" alt="logo">
+    {{ name }}
+{% endblock %}
+{% block rgcon %}
+    <ul class="usrinfo">
+        <li>
+            <div style="overflow: hidden">
+                <img src="/static/images/head.jpg" alt="">
+                <h1 style="float: left">{{ user.name }}</h1>
+            </div>
+        </li>
+        <li><p>性别</p><p>{{ user.sex }}</p></li>
+        <li><p>年龄</p><p>{{ user.age }}</p></li>
+        <li><p>联系电话</p><p>{{ user.pNumber }}</p></li>
+    </ul>
+{% endblock %}

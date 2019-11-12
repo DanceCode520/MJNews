@@ -1,0 +1,18 @@
+{% extends 'backBase.html' %}
+{% block name %}
+    <img src="/static/images/head.jpg" style="width: 28px;border-radius:14px;" alt="logo">
+    {{ name }}
+{% endblock %}
+
+{% block rgcon %}
+    {% for new in newsArr %}
+        <div class="external" style="background-color: unset">
+            <a href="{{ url_for('showbkNewsDetail',nid=new.id) }}">
+                <h2>{{ new.title }}</h2>
+                <p>{{ new.content }}</p>
+                <div class="writer">{{ new.writer }}</div>
+                <div class="time">{{ new.date }}</div>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,71 @@
+img.main {
+    cursor: pointer;
+}
+
+.bkcontent {
+    margin: 0 auto;
+    width: 40%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.bkcontent select {
+    width: auto;
+    padding: 0 2%;
+    margin: 0;
+}
+
+.bkcontent div {
+    margin: 10px;
+}
+
+.bkcontent div img {
+    width: 100%;
+}
+
+body {
+    background: url("images/520.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logbk {
+    /*background: url("images/loging.jpg") no-repeat;*/
+    /*background-size: cover;*/
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+}
+
+
+div.cover {
+    border: 3px solid gray;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 235px;
+    height: 175px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.loginbut {
+    color: white;
+    background: #3388ff;
+    height: 30px !important;
+    border-radius: 10px;
+}
+
+div.cover p {
+    margin: 5px;
+}
+
+div.cover p input {
+    border-radius: 3px;
+    width: 220px;
+    height: 20px;
+}

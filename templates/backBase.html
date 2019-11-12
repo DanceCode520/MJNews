@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <srcipt src="{{ url_for('static',filename='jquery.min.js') }}"></srcipt>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bkbase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='newsList.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='/images/tlogo.ico') }}" type="image/x-icon"/>
+    {% block cssorjs %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="head">
+    <div class="mjtitle" style="float: left;height: 100%;margin-left: 55px;">
+        <img src="/static/images/logo.png" style="height: 100%;border-radius: 4px;" alt="logo">MJNews
+    </div>
+    <div class="mjtitle">
+        {% block name %}
+        {% endblock %}
+    </div>
+</div>
+<div class="content">
+    <div class="lfcon">
+        <ul>
+            <li><img src="/static/images/1.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=1) }}">财 经</a>
+            </li>
+            <li><img src="/static/images/2.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=2) }}">政 治</a>
+            </li>
+            <li><img src="/static/images/3.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=3) }}">娱 乐</a>
+            </li>
+            <li><img src="/static/images/4.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=4) }}">科 技</a>
+            </li>
+            <li><img src="/static/images/5.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=5) }}">军 事</a>
+            </li>
+            <li><img src="/static/images/6.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=6) }}">历 史</a>
+            </li>
+            <li><img src="/static/images/7.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=7) }}">游 戏</a>
+            </li>
+            <li><img src="/static/images/8.png" alt=""><a href="{{ url_for('bkNewsListByType',typeCode=8) }}">职 场</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rgcon">
+        {% block rgcon %}
+
+        {% endblock %}
+    </div>
+</div>
+<div class="mjfoot">
+    <div>MICHAEL JACKSON, THE KING OF POP</div>
+</div>
+</body>
+</html>

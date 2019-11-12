@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block mjcss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='newslist.css') }}">
+{% endblock %}
+{% block mjcontent %}
+    {% for new in newsArr %}
+        <div class="external">
+            <a href="{{ url_for('showNewsDetail',nid=new.id) }}">
+                <h2>{{ new.title }}</h2>
+                <p>{{ new.content }}</p>
+                <div class="writer">{{ new.writer }}</div>
+                <div class="time">{{ new.time }}</div>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}
+

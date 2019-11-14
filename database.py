@@ -5,7 +5,7 @@ from Model.models import News
 import json
 
 # 打开数据库连接
-db = pymysql.connect(host="127.0.0.1", user="root", password="your password", database="your database")
+db = pymysql.connect(host="127.0.0.1", user="root", password="your passwords", database="your database")
 # 使用 cursor() 方法创建一个游标对象 cursor
 cursor = db.cursor()
 

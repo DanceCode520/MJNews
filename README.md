@@ -1,3 +1,2 @@
-# MJNews
-python flask website.
-<p>pymysql</p>
+<h1>MJNews新闻网</h1>
+实现最基本的前后端交互及新闻的增删改查
